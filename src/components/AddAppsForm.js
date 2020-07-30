@@ -12,14 +12,17 @@ const AddAppsForm = (props) => {
 		setCompany(e.currentTarget.value);	
 		console.log(e.currentTarget.value);
 	};
+
 	const onChangePosition = e => {
 		setPosition(e.currentTarget.value);	
         console.log(e.currentTarget.value);
 	};
+
 	const onChangeUrl = e => {
 		setUrl(e.currentTarget.value);	
         console.log(e.currentTarget.value);
 	};
+	
 	const onChangeComment = e => {
 		setComment(e.currentTarget.value);	
         console.log(e.currentTarget.value);
@@ -67,32 +70,32 @@ const AddAppsForm = (props) => {
     
 	};
 	
-        return(
-            <form onSubmit={onSubmit}>
+	return(
+		<form onSubmit={onSubmit}>
 
-                <input value={newCompany} onChange={onChangeCompany} name="company" type="text" placeholder="Company"/><br/>
-                <input value={newPosition} onChange={onChangePosition} name="position" type="text" placeholder="Job Position"/><br/>
-                <input value={newUrl} onChange={onChangeUrl} name="url" type="url" placeholder="URL"/><br/>
+			<input value={newCompany} onChange={onChangeCompany} name="company" type="text" placeholder="Company"/><br/>
+			<input value={newPosition} onChange={onChangePosition} name="position" type="text" placeholder="Job Position"/><br/>
+			<input value={newUrl} onChange={onChangeUrl} name="url" type="url" placeholder="URL"/><br/>
 
-                <h3>Sent by:</h3>
-                <label htmlFor="email">Email</label>
-                <input id="email" name="email" type="checkbox"/>
-                <br/>
-                <label htmlFor="website">Website</label>
-                <input id="website" name="website" type="checkbox"/>
-                <br/>
-                <label htmlFor="linkedin">Linkedin</label>
-                <input id="linkedin" name="linkedin" type="checkbox"/>
-                <br/>
+			<h3>Sent by:</h3>
+			<label htmlFor="email">Email</label>
+			<input id="email" name="email" type="checkbox"/>
+			<br/>
+			<label htmlFor="website">Website</label>
+			<input id="website" name="website" type="checkbox"/>
+			<br/>
+			<label htmlFor="linkedin">Linkedin</label>
+			<input id="linkedin" name="linkedin" type="checkbox"/>
+			<br/>
 
-                <textarea value={newComment} onChange={onChangeComment} name="comment" type="text" placeholder="Comment"/>
-                <br/>
+			<textarea value={newComment} onChange={onChangeComment} name="comment" type="text" placeholder="Comment"/>
+			<br/>
 
-                <button type="submit">Submit</button>
+			<button type="submit">Submit</button>
 
-            </form>
-        )
-    }
+		</form>
+	)
+}
 
 
 export default AddAppsForm;
