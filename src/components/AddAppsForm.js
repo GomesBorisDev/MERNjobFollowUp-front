@@ -40,6 +40,9 @@ const AddAppsForm = (props) => {
         const email = document.getElementById("email").checked;
         const website = document.getElementById("website").checked;
 		const linkedin = document.getElementById("linkedin").checked;
+
+		const addedAt = Date.now();
+		console.log(addedAt);
     
         const data = {
           company: company,
@@ -48,7 +51,8 @@ const AddAppsForm = (props) => {
           email: email,
           website: website,
           linkedin: linkedin,
-          comment: comment
+		  comment: comment,
+		  addedAt: addedAt
         };
 
 		console.log(data);
@@ -66,7 +70,9 @@ const AddAppsForm = (props) => {
 		})
 		.catch(err => {
             console.log("Error in AddAppsForm !");
-        });
+		});
+		
+		window.location.reload();
     
 	};
 	
