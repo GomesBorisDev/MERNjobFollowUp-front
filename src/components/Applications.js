@@ -27,7 +27,7 @@ const Applications = (props) => {
         };
 
         return(
-            <div key={application._id} className="card col-4">
+            <div key={application._id} className="card col-3 m-1">
                 <div className="card-body">
                     <h5 className="card-title">{application.company}</h5>
                     <h6 className="card-subtitle mb-2 text-muted">{application.position}</h6>
@@ -44,7 +44,8 @@ const Applications = (props) => {
     
     return (
             
-            <div className="row">
+        
+            <div className="row d-flex justify-content-around">
                 
                 {jobData}
                 

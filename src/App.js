@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 import Nav from './components/Nav';
-import AddAppsForm from './components/AddAppsForm';
+import Home from './components/Home'
 import Applications from './components/Applications';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -11,12 +11,14 @@ function App() {
     <div className="App">
       {/* <header className="App-header">
       </header> */}
+
       <Router>
         <Nav/>
-        <h1>My Job Applications !</h1>
+        {/* <h1>My Job Applications !</h1> */}
+        <h2>Keep track of you applications.</h2>
 
         <Switch>
-          <Route exact path="/" component={AddAppsForm}></Route>
+          <Route exact path="/" component={Home}></Route>
           <Route path="/applications" component={Applications}></Route>   
         </Switch>
 
