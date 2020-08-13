@@ -15,7 +15,7 @@ function App() {
       <Router>
         <Nav/>
         {/* <h1>My Job Applications !</h1> */}
-        <h2>Keep track of you applications.</h2>
+        <h2 className="text-light">Keep track of you applications.</h2>
 
         <Switch>
           <Route exact path="/" component={Home}></Route>

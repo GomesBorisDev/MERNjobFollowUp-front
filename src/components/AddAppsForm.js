@@ -77,7 +77,7 @@ const AddAppsForm = (props) => {
 	};
 	
 	return(
-		<form onSubmit={onSubmit}>
+		<form className="p-1" onSubmit={onSubmit}>
 
 			<input className="m-2" value={newCompany} onChange={onChangeCompany} name="company" type="text" placeholder="Company"/><br/>
 			<input className="m-2" value={newPosition} onChange={onChangePosition} name="position" type="text" placeholder="Job Position"/><br/>
@@ -97,7 +97,7 @@ const AddAppsForm = (props) => {
 			<textarea className="m-2" value={newComment} onChange={onChangeComment} name="comment" type="text" placeholder="Comment"/>
 			<br/>
 
-			<button className="btn btn-primary" type="submit">Submit</button>
+			<button className="btn btn-primary m-2" type="submit">Submit</button>
 
 		</form>
 	)
